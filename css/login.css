@@ -1,0 +1,48 @@
+body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background-color: #f8f9fa;
+      position: relative;
+}
+
+header {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.logo  {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.login-container  {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.medical-item  {
+    position: absolute;
+    width: 150px;
+    opacity: 0.7;
+}
+
+.rotate {
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {             
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
