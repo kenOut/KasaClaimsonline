@@ -7,11 +7,48 @@ body {
       overflow: hidden;
       background-color: #f8f9fa;
       position: relative;
+      padding-top: 70px;
 }
 
+/* From Uiverse.io by milley69 */ 
+.loading svg polyline {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .loading svg polyline#back {
+    fill: none;
+    stroke: #ff4d5033;
+  }
+  
+  .loading svg polyline#front {
+    fill: none;
+    stroke: #ff4d4f;
+    stroke-dasharray: 48, 144;
+    stroke-dashoffset: 192;
+    animation: dash_682 1.4s linear infinite;
+  }
+  
+  @keyframes dash_682 {
+    72.5% {
+      opacity: 0;
+    }
+  
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 10px 0;
+    padding: 15px 0;
+    z-index: 1000;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -45,4 +82,8 @@ header {
 @keyframes rotate {             
     from { transform: rotate(0deg);}
     to { transform: rotate(360deg);}
+}
+
+.hidden {
+    display: none;
 }
