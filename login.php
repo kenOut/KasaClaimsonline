@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['username'] = $username;
         echo "Login successful! Redirecting...";
-        header("refresh:2;url=dashboard.php"); // Redirect to dashboard
+        header("refresh:2;url=../pages/start.html"); // Redirect to dashboard
     } else {
         echo "Invalid username or password.";
     }
